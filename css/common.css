@@ -1,0 +1,90 @@
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
+/*总内容*/
+#container{
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+}
+/*小圆点*/
+.dot{
+    width: 5px;
+    height: 5px;
+    background-color:rgb(7, 161, 250);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    transform: translateY(-3px)
+}
+/*左浮*/
+.fl{
+    float: left;
+}
+/*右浮*/
+.fr{
+    float:right;
+}
+/*广告*/
+.ad{
+    height: 100px;
+    background-color:blue;
+    margin:10px 0 10px 0;
+}
+.ad-blue{
+    font-size: 14px;
+    color: 
+}
+/*灰色字体*/
+.font-gray{
+    display: inline-block;
+    font-size: 13px;
+    color: gray;
+}
+/*蓝色字体*/
+.font-blue{
+    font-size: 13px;
+    color: rgb(11, 117, 238);
+}
+/*一个箭头*/
+.arrows{
+    
+}
+.arrows #triangle{
+    width: 0px;
+    height: 0px;
+    border: 8px solid red;
+    border-top-color:transparent;
+    border-left-color:transparent;
+    border-bottom-color:transparent;
+}
+.arrows #rectangle{
+    width: 16px;
+    height: 9px;
+    background-color: red;
+    transform: translateY(-4px) translateX(-4px);
+}
+/*文章节点样式*/
+.article-content li{
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.article-content .article-content-list img{
+    width: 100%;
+}
+/*文章内广告样式*/
+.article-content .article-ad{
+    padding-right: 10px;
+    height: 100px;
+    border: 1px solid #eee;
+    border-left: none;
+    border-right: none;
+}
+.article-content .article-ad img{
+    float: left;
+    width: 150px;
+}
+.article-content .article-ad p{
+    float: right;
+    width: 200px;
+    height: 70px;
+}

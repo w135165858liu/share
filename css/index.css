@@ -1,0 +1,24 @@
+/*顶部样式*/
+
+.header-title{
+    font-size: 22px;
+    font-weight: 300;
+}
+/*顶部广告*/
+.ad1{
+    background-image:url(../img/ad1.png);
+}
+/*文章顶部*/
+.article-top{
+    height: 21px;
+    line-height: 21px;
+}
+.article-top .date{
+    margin-right: 30px;
+}
+.article-top .reading{
+    float: right;
+}
+.arrows,.arrows-child{
+    display: inline-block;
+}
