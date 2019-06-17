@@ -22,3 +22,8 @@
 .arrows,.arrows-child{
     display: inline-block;
 }
+/*文章初始化时折叠效果*/
+.article-content-warp{
+    height: 450px;
+    overflow: hidden;
+}

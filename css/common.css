@@ -6,16 +6,6 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 a{
     text-decoration: none;
 }
-/*小圆点*/
-.dot{
-    width: 5px;
-    height: 5px;
-    background-color:rgb(7, 161, 250);
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px 0 5px;
-    transform: translateY(-3px)
-}
 /*左浮*/
 .fl{
     float: left;
@@ -27,7 +17,6 @@ a{
 /*广告*/
 .ad{
     height: 100px;
-    background-color:blue;
     margin:10px 0 10px 0;
 }
 .ad-blue{
@@ -64,7 +53,7 @@ a{
     transform: translateY(-4px) translateX(-4px);
 }
 /*文章节点样式*/
-.article-content li{
+.article-content-warp li{
     margin-top: 10px;
     padding-top: 10px;
 }
@@ -87,4 +76,39 @@ a{
     float: right;
     width: 200px;
     height: 70px;
+}
+/*文章底部链接*/
+.article-bottom-link-item a{
+    font-size: 16px;
+    color: rgb(0, 153, 255);
+}
+/*文章展开按钮*/
+.article-button{
+    width: 100%;
+    height: 40px;
+    background-color: #f60;
+    border:2px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+}
+/*文章展开箭头*/
+.article-unfold{
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.article-down-arrows{
+    
+}
+.broken-line{
+    width: 15px;
+    height: 15px;
+    border: 3px solid #f60;
+    border-top: none;
+    border-right: none;
+    transform: rotateZ(-45deg)
 }
