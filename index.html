@@ -3,31 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/iconfont1.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 </head>
 
 <body>
     <div id="container">
-        <header>
-            <p class="header-title">美女黑色礼服写真（二）</p>
-            <a href="#"></a>
-        </header>
-        <div class="ad ad1"></div>
         <nav id="article">
+            <header>
+                <p class="header-title">美女黑色礼服写真（二）</p>
+                <a href="#"></a>
+            </header>
+            <div class="ad ad1"></div>
             <div class="article-top">
-                <a href="javascript:;" class="date font-gray">2019-06-10</a>
-                <a href="#" class="article-ad-link font-blue">德国黑...</a>
-                <div class="arrows font-blue">
-                    <div class="arrows-child" id="triangle"></div>
-                    <div class="arrows-child" id="rectangle"></div>
-                    点击这里
+                <div class="top-row">
+                    <div class="val-center">
+                        <a href="javascript:;" class="date font-gray">2019-06-10</a>
+                    </div>
+                    <div class="val-center">
+                        <div>
+                            <a href="#" class="article-ad-link font-blue">
+                                德国黑...
+                            </a>
+                            <span class="arrows iconfont icon-zuojiantou"></span>
+                            <span class="font-blue ljg">点击这里</span>
+                        </div>
+                    </div>
+                    <div class="val-center">
+                        <a href="javascript:;" class="font-gray fr">
+                            阅读<span>5048</span>
+                        </a>
+                    </div>
                 </div>
-                <a href="javascript:;" class="font-gray reading">阅读<i>5048</i></a>
             </div>
             <div class="article-content">
                 <ul class="article-content-warp">
@@ -46,14 +60,17 @@
                         </div>
                     </li>
                     <li class="article-ad">
-                        <a href="#">
-                            <img src="./img/article-ad1.png" alt="">
-                            <p class="article-ad-message">
-                                啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈
-                            </p>
-                            <a href="javascrit:;" class="font-gray fr">阅读<i>10000+</i></a>
-                        </a>
-                        
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img src="./img/article-ad1.png" alt="">
+                            </div>
+                            <div class="col-xs-8 htall">
+                                <p class="article-ad-message">
+                                    啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈
+                                </p>
+                                <a href="javascrit:;" class="font-gray fr ad-reading">阅读<i>10000+</i></a>
+                            </div>
+                        </div> 
                     </li>
                     <li class="article-content-list">
                         <div>
@@ -64,35 +81,70 @@
                     </li>
                 </ul>
                 <div class="article-unfold">
-                    <div class="article-down-arrows">
-                        <div class="broken-line"></div>
-                        <div class="broken-line"></div>
-                    </div>
-                    <div class="article-button">
+                    <span class="iconfont icon-shousuoxiajiantou down-arrow"></span>
+                    <span class="article-button">
                         阅读全文
-                    </div>
+                    </span>
                 </div>
                 <ul class="article-bottom-link">
                     <li class="article-bottom-link-item">
                         <a href="#">
                             &bull;
-                            哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈啊哈...........
+                            哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈啊哈 哈哈哈哈啊哈
                         </a>
                     </li>
                     <li class="article-bottom-link-item">
                         <a href="#">
-                            <p>
-                                &bull;
-                                哈哈哈啊哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈啊哈...........
-                            </p>
+                            &bull;
+                            哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈啊哈 哈哈哈哈啊哈
                         </a>
                     </li>
                 </ul>
+                <span class="font-gray topjg">内容源于网络，如有侵权，请联系删除</span>
+            </div>
+            <div class="comment">
+                <div class="row topjg comment-btn">
+                    <div class="col-xs-4 article-eva">
+                        <i class="iconfont icon-zan rjg select"></i>
+                        喜欢
+                    </div>
+                    <div class="col-xs-4 article-eva">
+                        <i class="iconfont icon-chaping rjg select"></i>
+                        不喜欢
+                    </div>
+                    <div class="col-xs-4 article-eva">
+                        <i class="iconfont icon-gaojing rjg"></i>
+                        举报
+                    </div>
+                </div>
+                <textarea style="background-color: #eee" class="form-control topjg" rows="3" placeholder="请发表一些评论"></textarea>
+                <span class="article-button topjg">发布评论</button>
+            </div>
+            <div class="ad ad1"></div>
+            <div class="guess">
+                <span class="guessyou">猜你喜欢</span>
+                <div class="article-content">
+                    <ul class="article-content-warp">
+                        <li class="article-ad">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="./img/article-ad1.png" alt="">
+                                </div>
+                                <div class="col-xs-8 htall">
+                                    <p class="article-ad-message">
+                                        啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈啊哈哈哈
+                                    </p>
+                                    <a href="javascrit:;" class="font-gray fr ad-reading">阅读<i>10000+</i></a>
+                                </div>
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        
     </div>
-    
 </body>
-
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
 </html>

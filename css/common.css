@@ -1,7 +1,18 @@
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
 /*总内容*/
+*{
+    box-sizing: border-box;
+    
+}
+textarea{
+    resize: none;
+}
+span{
+    cursor: default;
+}
 #container{
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
 }
 a{
     text-decoration: none;
@@ -14,6 +25,28 @@ a{
 .fr{
     float:right;
 }
+/*右间隔*/
+.rjg{
+    margin-right: 0.5rem;
+}
+/*左间隔*/
+.ljg{
+    margin-left: 10px;
+}
+/*上间隔*/
+.topjg{
+    margin-top: 10px;
+}
+/*高度90px*/
+.htall{
+    height: 90px;
+}
+/*元素垂直居中*/
+.val-center{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
 /*广告*/
 .ad{
     height: 100px;
@@ -21,7 +54,7 @@ a{
 }
 .ad-blue{
     font-size: 14px;
-    color: 
+    color: rgb(11, 117, 238);
 }
 /*灰色字体*/
 .font-gray{
@@ -34,25 +67,11 @@ a{
     font-size: 13px;
     color: rgb(11, 117, 238);
 }
-/*一个箭头*/
-.arrows{
-    
-}
-.arrows #triangle{
-    width: 0px;
-    height: 0px;
-    border: 8px solid red;
-    border-top-color:transparent;
-    border-left-color:transparent;
-    border-bottom-color:transparent;
-}
-.arrows #rectangle{
-    width: 16px;
-    height: 9px;
-    background-color: red;
-    transform: translateY(-4px) translateX(-4px);
-}
+
 /*文章节点样式*/
+.article-content-warp{
+    width: 100%;
+}
 .article-content-warp li{
     margin-top: 10px;
     padding-top: 10px;
@@ -62,6 +81,7 @@ a{
 }
 /*文章内广告样式*/
 .article-content .article-ad{
+    position: relative;
     padding-right: 10px;
     height: 100px;
     border: 1px solid #eee;
@@ -70,20 +90,35 @@ a{
 }
 .article-content .article-ad img{
     float: left;
-    width: 150px;
+    width: 100%;
+    height: 78px;
 }
-.article-content .article-ad p{
-    float: right;
-    width: 200px;
+.article-content .article-ad .article-ad-message{
     height: 70px;
 }
+.article-content .article-ad .ad-reading{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
 /*文章底部链接*/
+.article-bottom-link{
+    width: 100%;
+}
+.article-bottom-link-item{
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .article-bottom-link-item a{
+    width: 100%;
     font-size: 16px;
     color: rgb(0, 153, 255);
+    line-height: 28px;
 }
 /*文章展开按钮*/
 .article-button{
+    display: inline-block;
     width: 100%;
     height: 40px;
     background-color: #f60;
@@ -94,21 +129,17 @@ a{
     color: #fff;
     font-size: 18px;
 }
-/*文章展开箭头*/
+/*文章展开箭头居中*/
 .article-unfold{
+    width: 100%;
     height: 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.article-down-arrows{
-    
-}
-.broken-line{
-    width: 15px;
-    height: 15px;
-    border: 3px solid #f60;
-    border-top: none;
-    border-right: none;
-    transform: rotateZ(-45deg)
+/*文章点赞部分*/
+#article .article-eva{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
 }
