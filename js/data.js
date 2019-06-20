@@ -1,4 +1,3 @@
-
 var data = [
     {
         "liClass": "article-content-list",

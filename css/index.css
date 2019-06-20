@@ -1,5 +1,4 @@
 /*顶部样式*/
-
 .header-title{
     font-size: 2.5rem;;
     font-weight: 400;
@@ -33,19 +32,19 @@
 /*文章顶部箭头*/
 .arrows{
     display: inline-block;
-    height: 20px;
-    font-size: 25px;
-    position: absolute;
-    color: brown;
+    width: 2rem;
+    height: 1.5rem;
+    background-image: url(../img/left_adv.jpg);
+    background-size: 100% 100%;
     animation: arrows .3s infinite alternate;
 }
 @keyframes arrows{
     from{
-        transform: translateX(0);
+        background-image: url(../img/left_adv.jpg);
     }
     to{
         transform: translateX(5px);
-        color: blue;
+        background-image: url(../img/left_adv_red.jpg);
     }
 }
 /*文章初始化时折叠效果*/
@@ -127,6 +126,7 @@
     white-space:nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: rgb(0, 153, 255);
 }
 .article-bottom-link-item a{
     width: 100%;
@@ -232,6 +232,8 @@ footer{
 }
 /*底部导肮上浮动广告*/
 .bottom-ad{
+    background-image:url(../img/ad1.png);
+    background-size:100% 100%;
     position: fixed;
     bottom: 0;
     height: 100px;
