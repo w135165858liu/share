@@ -26,7 +26,6 @@
 .top-row{
     display: flex;
     justify-content: space-between;
-
 }
 
 /*文章顶部箭头*/
@@ -34,7 +33,7 @@
     display: inline-block;
     height: 20px;
     font-size: 25px;
-    /* transform: translateY(3px); */
+    
     color: brown;
     animation: arrows .3s infinite alternate;
 }
@@ -196,6 +195,7 @@ footer{
     width: 100%;
     position: fixed;
     bottom:0;
+    display: none;
 }
 .nav-menu{
     height: 50px;
