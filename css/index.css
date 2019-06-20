@@ -1,8 +1,8 @@
 /*顶部样式*/
 
 .header-title{
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 2.5rem;;
+    font-weight: 400;
 }
 /*文章内容居中显示*/
 .article-content{
@@ -63,7 +63,7 @@
 }
 /*文章折叠时下箭头*/
 .down-arrow{
-    font-size: 30px;
+    font-size: 4rem;
     color:#f60;
     animation: downarrows .5s infinite alternate;
 }
@@ -75,14 +75,156 @@
         transform: translateY(15px);
     }
 }
+/*文章节点样式*/
+.article-content-warp{
+    width: 100%;
+}
+.article-content-warp li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.article-content .article-content-list{
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+.article-content .article-content-list p{
+    font-size: 2rem;
+}
+.article-content .article-content-list img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*文章内广告样式*/
+.article-content .article-ad{
+    position: relative;
+    padding-right: 10px;
+    padding-top:10px;
+    height: 100px;
+    border: 1px solid #eee;
+    border-left: none;
+    border-right: none;
+}
+.article-content .article-ad img{
+    float: left;
+    width: 100%;
+    height: 78px;
+}
+.article-content .article-ad .article-ad-message{
+    font-size: 1.8rem;
+    height: 70px;
+}
+.article-content .article-ad .ad-reading{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/*文章底部链接*/
+.article-bottom-link{
+    width: 100%;
+}
+.article-bottom-link-item{
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article-bottom-link-item a{
+    width: 100%;
+    font-size: 16px;
+    color: rgb(0, 153, 255);
+    line-height: 28px;
+}
+/*文章展开按钮*/
+.article-button{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: #f60;
+    border:2px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+}
+/*文章展开箭头居中*/
+.article-unfold{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*文章点赞部分*/
+#article .article-eva{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+}
 /*喜欢不喜欢*/
 .comment-btn{
     line-height: 45px;
 }
 /*猜你喜欢*/
+.article-warp{
+    width:100%;
+}
 .guessyou{
     display: block;
     font-size: 2rem;
     border-left: 3px solid #f60;
     padding-left: 10px;
+}
+.guess .article-ad{
+    border-top:none;
+}
+/*猜你喜欢内广告*/
+.guess-ad{
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 100px;
+    border: 1px solid #eee;
+    border-left: none;
+    border-right: none;
+}
+.guess-ad-bgimg{
+    height: 100%;
+    background-image: url(../img/ad1.png);
+    background-size: 100% 100%;
+}
+/*底部导航菜单*/
+footer{
+    width: 100%;
+    position: fixed;
+    bottom:0;
+}
+.nav-menu{
+    height: 50px;
+    background-color:#eee;;
+    display: flex;
+    flex-direction: row;
+}
+.nav-menu .nav-menu-items{
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #ccc;
+}
+.nav-menu .unread{
+    display: inline-block;
+    width: 2rem;
+    height: 1.5rem;
+    background-color: red;
+    border-radius: 1rem;
+    text-align: center;
+    color:#fff;
+    position: absolute;
+    right: 0.2rem;
+    top:0.3rem;
+}
+/*菜单按钮底部边框*/
+.menu-btn{
+    border-bottom:0.4rem solid #f60;
 }
