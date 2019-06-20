@@ -1,14 +1,45 @@
 ;(function(){
-    $(window).on('load',function(){
-        commentState()
-        if(sessionStorage.getItem('dislike')){
-            $('.article-eva').eq(1).find('i').css('color','#f60')
-            
-        }else if(sessionStorage.getItem('like')){
-            $('.article-eva').eq(0).find('i').css('color','#f60')
-            
+    /**动态生成文章内容 */
+    function creatHtml(){
+        var html = '';
+        for(var i = 0;i<data.length;i++){
+            if(data[i].liClass == "article-ad"){
+                 
+                html += '<li class="'+data[i].liClass+'">'
+                html +=      '<div class="row">'
+                html +=          '<div class="col-xs-4">'
+                if(data[i].imgSrc == ''){
+                    html += ''
+                }else{
+                    html +=              '<img src="'+data[i].imgSrc+'" alt="">'
+                }
+                html +=          '</div>'
+                html +=          '<div class="col-xs-8 htall">'
+                html +=              '<p class="'+data[i].pClass+'">'
+                html +=                  ''+data[i].pContent+''
+                html +=              '</p>'
+                html +=              '<a href="javascrit:;" class="font-gray fr ad-reading">阅读<i>'+data[i].read+'</i></a>'
+                html +=          '</div>'
+                html +=      '</div>'
+                html += '</li>'
+            }else if(data[i].liClass == "article-content-list"){
+                html += '<li class="'+data[i].liClass+'">'
+                html +=     '<div>'
+                if(data[i].imgSrc == ''){
+                    html += ''
+                }else{
+                    html +=         '<img src="'+data[i].imgSrc+'" alt="">'
+                }
+                html +=         '<a href="'+data[i].href+'" class="'+data[i].aClass+'"></a>'
+                html +=         '<p>'
+                html +=             ''+data[i].pContent+''
+                html +=         '</p>'
+                html +=     '</div>'
+                html += '</li>'
+            }
         }
-    })
+        return html;
+    }
     /*点击展开*/
     $('.article-unfold').on('click',function(){
         this.style.display='none';
@@ -31,7 +62,18 @@
             })
         }
     }
-    
+    $(window).on('ready',function(){
+        /**把文章节点插入页面 */
+        $('.article-content-warp').html(creatHtml())
+        commentState()
+        if(sessionStorage.getItem('dislike')){
+            $('.article-eva').eq(1).find('i').css('color','#f60')
+            
+        }else if(sessionStorage.getItem('like')){
+            $('.article-eva').eq(0).find('i').css('color','#f60')
+            
+        }
+    })
     /**存储评价状态 */
     function likeCommentLocal(){
         sessionStorage.setItem('like','1')
@@ -39,6 +81,7 @@
     function dislikeCommentLocal(){
         sessionStorage.setItem('dislike','1')
     }
+    
     /**评论 */
     function pubCom(){
         var $val = $('.form-control').val()
@@ -48,7 +91,9 @@
         if(pubCom() == ''){
             alert('请输入评论')
         }else{
+            $('.form-control').val('')
             alert('评论已发布')
+           
         }
     })
     /*生成推荐文章节点*/
@@ -92,6 +137,7 @@
             }
         }
         /*模拟懒加载*/
+        
         $(window).on('scroll',debounce(function(){
             var $Top = $('.guess .article-warp')[0].getBoundingClientRect().top
             var $artH = $('#article').height()
@@ -99,9 +145,15 @@
             if($Top<$artH){
                 $('.article-warp').append(buildGuessHtml())
             }
-            if($Top<-900){
-                $('footer').show()
-            }else{
+            if($Top<-400 && $Top > -600){
+                $('footer').fadeIn();
+                // $('.nav-menu').hide();
+                $('.bottom-ad').show()
+            }else if($Top<-600){
+                // $('.nav-menu').show();
+                $('.bottom-ad').hide()
+            }
+            else{
                 $('footer').hide()
             }
         },500))

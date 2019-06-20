@@ -23,17 +23,19 @@
 .article-top .date{
     margin-right: 30px;
 }
-.top-row{
-    display: flex;
-    justify-content: space-between;
+.article-top-item{
+    display: inline-block;
+    height: 100%;
 }
-
+.article-top-item:nth-child(1){
+    margin-right: 2rem;
+}
 /*文章顶部箭头*/
 .arrows{
     display: inline-block;
     height: 20px;
     font-size: 25px;
-    
+    position: absolute;
     color: brown;
     animation: arrows .3s infinite alternate;
 }
@@ -227,4 +229,12 @@ footer{
 /*菜单按钮底部边框*/
 .menu-btn{
     border-bottom:0.4rem solid #f60;
+}
+/*底部导肮上浮动广告*/
+.bottom-ad{
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
 }
